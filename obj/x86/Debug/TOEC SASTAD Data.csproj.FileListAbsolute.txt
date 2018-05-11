@@ -1,0 +1,20 @@
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\Config\Log4Net.config
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\Config\DB.config
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\TOEC SASTAD Data.dll.config
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\TOEC SASTAD Data.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\TOEC SASTAD Data.pdb
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\EntityFramework.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\EntityFramework.SqlServer.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\MySql.Data.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\TOEC_Common.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\log4net.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\TOEC_Common.pdb
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\EntityFramework.xml
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\EntityFramework.SqlServer.xml
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\log4net.xml
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\zh-Hans\EntityFramework.resources.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\x86\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\obj\x86\Debug\TOEC SASTAD Data.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\obj\x86\Debug\TOEC SASTAD Data.pdb
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\obj\x86\Debug\TOEC SASTAD Data.csprojResolveAssemblyReference.cache

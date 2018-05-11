@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sartasModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account_r_role_function">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="RoleID" Type="varchar" MaxLength="36" />
+    <Property Name="FunctionID" Type="varchar" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="account_r_users_roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="RoleID" Type="varchar" MaxLength="36" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_t_function">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="PID" Type="varchar" MaxLength="36" />
+    <Property Name="FunctionName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="255" />
+    <Property Name="OrderNum" Type="int" />
+    <Property Name="Visible" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_t_role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderNum" Type="int" />
+  </EntityType>
+  <EntityType Name="account_t_station">
+    <Key>
+      <PropertyRef Name="StationID" />
+    </Key>
+    <Property Name="StationID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="StationName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ConnectString" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="TelexCode" Type="varchar" MaxLength="255" />
+    <Property Name="StationType" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="OrderNum" Type="int" />
+  </EntityType>
+  <EntityType Name="account_t_user">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DeptCode" Type="int" />
+    <Property Name="RealName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShiftName" Type="varchar" MaxLength="50" />
+    <Property Name="VoiceName" Type="varchar" MaxLength="50" />
+    <Property Name="IP" Type="varchar" MaxLength="50" />
+    <Property Name="TelexCode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="alarmdetail">
+    <Key>
+      <PropertyRef Name="AlarmDetail_ID" />
+    </Key>
+    <Property Name="AlarmDetail_ID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Train_ID" Type="varchar" MaxLength="36" />
+    <Property Name="TrainDetail_ID" Type="varchar" MaxLength="36" />
+    <Property Name="Side" Type="varchar" MaxLength="5" />
+    <Property Name="FileName" Type="varchar" MaxLength="255" />
+    <Property Name="FileContent" Type="text" />
+    <Property Name="ProblemType" Type="varchar" MaxLength="50" />
+    <Property Name="AlarmLevel" Type="int" />
+    <Property Name="Source" Type="varchar" MaxLength="10" />
+    <Property Name="AlgResult" Type="int" />
+    <Property Name="HandleResult" Type="varchar" MaxLength="5" />
+    <Property Name="OpUser" Type="varchar" MaxLength="36" />
+    <Property Name="OpTime" Type="datetime" Precision="0" />
+    <Property Name="InsertTime" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hotwheel_axle">
+    <Key>
+      <PropertyRef Name="HWAxleID" />
+    </Key>
+    <Property Name="HWAxleID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="TrainDetail_ID" Type="varchar" MaxLength="36" />
+    <Property Name="Axle_OrderNum" Type="int" />
+    <Property Name="TrainDetail_OrderNum" Type="int" />
+    <Property Name="Left_TemperatureRise" Type="float" />
+    <Property Name="Right_TemperatureRise" Type="float" />
+    <Property Name="LeftWave" Type="varchar" MaxLength="100" />
+    <Property Name="RightWave" Type="varchar" MaxLength="100" />
+    <Property Name="Speed" Type="float" />
+    <Property Name="NextAxleDistance" Type="varchar" MaxLength="50" />
+    <Property Name="FileName" Type="varchar" MaxLength="200" />
+    <Property Name="InTime" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="line">
+    <Key>
+      <PropertyRef Name="Line_ID" />
+    </Key>
+    <Property Name="Line_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Line_Name" Type="varchar" MaxLength="50" />
+    <Property Name="GQCode" Type="varchar" MaxLength="50" />
+    <Property Name="CXCode" Type="varchar" MaxLength="50" />
+    <Property Name="WMVCode" Type="varchar" MaxLength="100" />
+    <Property Name="IPaddress" Type="varchar" MaxLength="100" />
+    <Property Name="Userid" Type="varchar" MaxLength="100" />
+    <Property Name="Pass" Type="varchar" MaxLength="100" />
+    <Property Name="port" Type="varchar" MaxLength="100" />
+    <Property Name="CameNum" Type="varchar" MaxLength="100" />
+    <Property Name="TelexCode" Type="varchar" MaxLength="10" />
+    <Property Name="NextTelexCode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="qbdetail">
+    <Key>
+      <PropertyRef Name="QBDetailID" />
+    </Key>
+    <Property Name="QBDetailID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="QBMasterID" Type="varchar" MaxLength="36" />
+    <Property Name="CC" Type="varchar" MaxLength="50" />
+    <Property Name="SWBZ" Type="varchar" MaxLength="50" />
+    <Property Name="CH" Type="varchar" MaxLength="50" />
+    <Property Name="SWH" Type="varchar" MaxLength="50" />
+    <Property Name="CZ" Type="varchar" MaxLength="50" />
+    <Property Name="CX" Type="varchar" MaxLength="50" />
+    <Property Name="PM" Type="varchar" MaxLength="50" />
+    <Property Name="JS" Type="varchar" MaxLength="255" />
+    <Property Name="PB" Type="varchar" MaxLength="50" />
+    <Property Name="JYBZ" Type="varchar" MaxLength="50" />
+    <Property Name="Intime" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qbmaster">
+    <Key>
+      <PropertyRef Name="QBMasterID" />
+    </Key>
+    <Property Name="QBMasterID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="TrainID" Type="varchar" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="statistics_image">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="guid" Nullable="false" />
+    <Property Name="TrainID" Type="guid" />
+    <Property Name="LineID" Type="int" />
+    <Property Name="AllCarNum" Type="int" />
+    <Property Name="OneCarCheckImagesNums" Type="int" />
+    <Property Name="TrainComeDate" Type="datetime" Precision="0" />
+    <Property Name="StaggerBgnOrderNo" Type="int" />
+    <Property Name="StaggerEndOrderNo" Type="int" />
+    <Property Name="MonitorImageNum" Type="int" />
+    <Property Name="CallAlgImageNum" Type="int" />
+    <Property Name="SucCheckImageNum" Type="int" />
+    <Property Name="FailCheckImageNum" Type="int" />
+    <Property Name="NoCheckImageNum" Type="int" />
+    <Property Name="MonitorImageRemark" Type="text" />
+    <Property Name="CallAlgImageRemark" Type="text" />
+    <Property Name="SucCheckImageRemark" Type="text" />
+    <Property Name="FailCheckImageRemark" Type="text" />
+    <Property Name="NoCheckImageRemark" Type="text" />
+    <Property Name="RecvCarInfoNum" Type="int" />
+    <Property Name="UseQBCarInfoNum" Type="int" />
+    <Property Name="DataSource" Type="varchar" MaxLength="50" />
+    <Property Name="InsertTime" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="sys_code">
+    <Key>
+      <PropertyRef Name="Code_ID" />
+    </Key>
+    <Property Name="Code_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeMap_ID" Type="varchar" MaxLength="2" />
+    <Property Name="tabindex" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="20" />
+    <Property Name="Meaning" Type="varchar" MaxLength="50" />
+    <Property Name="Remark" Type="varchar" MaxLength="50" />
+    <Property Name="IsEnable" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="sys_codemap">
+    <Key>
+      <PropertyRef Name="CodeMap_ID" />
+    </Key>
+    <Property Name="CodeMap_ID" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="20" />
+    <Property Name="Value" Type="varchar" MaxLength="200" />
+    <Property Name="Meaning" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sys_log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="OpTime" Type="datetime" Precision="0" />
+    <Property Name="ApplicationName" Type="varchar" MaxLength="50" />
+    <Property Name="FunctionName" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="10" />
+    <Property Name="Detail" Type="varchar" MaxLength="5000" />
+    <Property Name="ErrorID" Type="varchar" MaxLength="36" />
+    <Property Name="Version" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="train">
+    <Key>
+      <PropertyRef Name="Train_ID" />
+    </Key>
+    <Property Name="Train_ID" Type="guid" Nullable="false" />
+    <Property Name="Line_ID" Type="int" />
+    <Property Name="Train_No" Type="varchar" MaxLength="50" />
+    <Property Name="Train_Speed" Type="varchar" MaxLength="10" />
+    <Property Name="Train_Count" Type="int" />
+    <Property Name="Train_type" Type="varchar" MaxLength="50" />
+    <Property Name="Train_ComeDate" Type="datetime" Precision="0" />
+    <Property Name="Train_WorkFlag" Type="int" Nullable="false" />
+    <Property Name="Train_Real" Type="int" />
+    <Property Name="source" Type="varchar" MaxLength="10" />
+    <Property Name="TelexCode" Type="varchar" MaxLength="10" />
+    <Property Name="AlarmLevel" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="traindetail">
+    <Key>
+      <PropertyRef Name="TrainDetail_ID" />
+    </Key>
+    <Property Name="TrainDetail_ID" Type="guid" Nullable="false" />
+    <Property Name="Train_ID" Type="guid" />
+    <Property Name="TrainDetail_OrderNo" Type="int" />
+    <Property Name="TrainDetail_No" Type="varchar" MaxLength="50" />
+    <Property Name="TrainDetail_Remark" Type="varchar" MaxLength="50" />
+    <Property Name="TrainDetail_IF" Type="int" />
+    <Property Name="vehicletype" Type="varchar" MaxLength="50" />
+    <Property Name="startstation" Type="varchar" MaxLength="50" />
+    <Property Name="endstation" Type="varchar" MaxLength="50" />
+    <Property Name="GoodsName" Type="varchar" MaxLength="50" />
+    <Property Name="Ziz" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Zaiz" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="HC" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="smoke_result" Type="varchar" MaxLength="50" />
+    <Property Name="DealTime" Type="datetime" Precision="0" />
+    <Property Name="AlarmLevel" Type="varchar" MaxLength="2" />
+    <Property Name="AlarmTime" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="sartasModelStoreContainer">
+    <EntitySet Name="account_r_role_function" EntityType="Self.account_r_role_function" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="account_r_users_roles" EntityType="Self.account_r_users_roles" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="account_t_function" EntityType="Self.account_t_function" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="account_t_role" EntityType="Self.account_t_role" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="account_t_station" EntityType="Self.account_t_station" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="account_t_user" EntityType="Self.account_t_user" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="alarmdetail" EntityType="Self.alarmdetail" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="hotwheel_axle" EntityType="Self.hotwheel_axle" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="line" EntityType="Self.line" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="qbdetail" EntityType="Self.qbdetail" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="qbmaster" EntityType="Self.qbmaster" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="statistics_image" EntityType="Self.statistics_image" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="sys_code" EntityType="Self.sys_code" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="sys_codemap" EntityType="Self.sys_codemap" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="sys_log" EntityType="Self.sys_log" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="train" EntityType="Self.train" Schema="sartas" store:Type="Tables" />
+    <EntitySet Name="traindetail" EntityType="Self.traindetail" Schema="sartas" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

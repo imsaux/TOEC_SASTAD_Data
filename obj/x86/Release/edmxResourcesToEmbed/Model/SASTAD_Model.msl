@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sartasModelStoreContainer" CdmEntityContainer="sartasEntities">
+    <EntitySetMapping Name="alarmdetail">
+      <EntityTypeMapping TypeName="sartasModel.alarmdetail">
+        <MappingFragment StoreEntitySet="alarmdetail">
+          <ScalarProperty Name="AlarmDetail_ID" ColumnName="AlarmDetail_ID" />
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="TrainDetail_ID" ColumnName="TrainDetail_ID" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileContent" ColumnName="FileContent" />
+          <ScalarProperty Name="ProblemType" ColumnName="ProblemType" />
+          <ScalarProperty Name="AlarmLevel" ColumnName="AlarmLevel" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="AlgResult" ColumnName="AlgResult" />
+          <ScalarProperty Name="HandleResult" ColumnName="HandleResult" />
+          <ScalarProperty Name="OpUser" ColumnName="OpUser" />
+          <ScalarProperty Name="OpTime" ColumnName="OpTime" />
+          <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hotwheel_axle">
+      <EntityTypeMapping TypeName="sartasModel.hotwheel_axle">
+        <MappingFragment StoreEntitySet="hotwheel_axle">
+          <ScalarProperty Name="HWAxleID" ColumnName="HWAxleID" />
+          <ScalarProperty Name="TrainDetail_ID" ColumnName="TrainDetail_ID" />
+          <ScalarProperty Name="Axle_OrderNum" ColumnName="Axle_OrderNum" />
+          <ScalarProperty Name="TrainDetail_OrderNum" ColumnName="TrainDetail_OrderNum" />
+          <ScalarProperty Name="Left_TemperatureRise" ColumnName="Left_TemperatureRise" />
+          <ScalarProperty Name="Right_TemperatureRise" ColumnName="Right_TemperatureRise" />
+          <ScalarProperty Name="LeftWave" ColumnName="LeftWave" />
+          <ScalarProperty Name="RightWave" ColumnName="RightWave" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="NextAxleDistance" ColumnName="NextAxleDistance" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="line">
+      <EntityTypeMapping TypeName="sartasModel.line">
+        <MappingFragment StoreEntitySet="line">
+          <ScalarProperty Name="Line_ID" ColumnName="Line_ID" />
+          <ScalarProperty Name="Line_Name" ColumnName="Line_Name" />
+          <ScalarProperty Name="GQCode" ColumnName="GQCode" />
+          <ScalarProperty Name="CXCode" ColumnName="CXCode" />
+          <ScalarProperty Name="WMVCode" ColumnName="WMVCode" />
+          <ScalarProperty Name="IPaddress" ColumnName="IPaddress" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="port" ColumnName="port" />
+          <ScalarProperty Name="CameNum" ColumnName="CameNum" />
+          <ScalarProperty Name="TelexCode" ColumnName="TelexCode" />
+          <ScalarProperty Name="NextTelexCode" ColumnName="NextTelexCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qbdetail">
+      <EntityTypeMapping TypeName="sartasModel.qbdetail">
+        <MappingFragment StoreEntitySet="qbdetail">
+          <ScalarProperty Name="QBDetailID" ColumnName="QBDetailID" />
+          <ScalarProperty Name="QBMasterID" ColumnName="QBMasterID" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="SWBZ" ColumnName="SWBZ" />
+          <ScalarProperty Name="CH" ColumnName="CH" />
+          <ScalarProperty Name="SWH" ColumnName="SWH" />
+          <ScalarProperty Name="CZ" ColumnName="CZ" />
+          <ScalarProperty Name="CX" ColumnName="CX" />
+          <ScalarProperty Name="PM" ColumnName="PM" />
+          <ScalarProperty Name="JS" ColumnName="JS" />
+          <ScalarProperty Name="PB" ColumnName="PB" />
+          <ScalarProperty Name="JYBZ" ColumnName="JYBZ" />
+          <ScalarProperty Name="Intime" ColumnName="Intime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qbmaster">
+      <EntityTypeMapping TypeName="sartasModel.qbmaster">
+        <MappingFragment StoreEntitySet="qbmaster">
+          <ScalarProperty Name="QBMasterID" ColumnName="QBMasterID" />
+          <ScalarProperty Name="TrainID" ColumnName="TrainID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_code">
+      <EntityTypeMapping TypeName="sartasModel.sys_code">
+        <MappingFragment StoreEntitySet="sys_code">
+          <ScalarProperty Name="Code_ID" ColumnName="Code_ID" />
+          <ScalarProperty Name="CodeMap_ID" ColumnName="CodeMap_ID" />
+          <ScalarProperty Name="tabindex" ColumnName="tabindex" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Meaning" ColumnName="Meaning" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_codemap">
+      <EntityTypeMapping TypeName="sartasModel.sys_codemap">
+        <MappingFragment StoreEntitySet="sys_codemap">
+          <ScalarProperty Name="CodeMap_ID" ColumnName="CodeMap_ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Meaning" ColumnName="Meaning" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="train">
+      <EntityTypeMapping TypeName="sartasModel.train">
+        <MappingFragment StoreEntitySet="train">
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="Line_ID" ColumnName="Line_ID" />
+          <ScalarProperty Name="Train_No" ColumnName="Train_No" />
+          <ScalarProperty Name="Train_Speed" ColumnName="Train_Speed" />
+          <ScalarProperty Name="Train_Count" ColumnName="Train_Count" />
+          <ScalarProperty Name="Train_type" ColumnName="Train_type" />
+          <ScalarProperty Name="Train_ComeDate" ColumnName="Train_ComeDate" />
+          <ScalarProperty Name="Train_WorkFlag" ColumnName="Train_WorkFlag" />
+          <ScalarProperty Name="Train_Real" ColumnName="Train_Real" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="TelexCode" ColumnName="TelexCode" />
+          <ScalarProperty Name="AlarmLevel" ColumnName="AlarmLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="traindetail">
+      <EntityTypeMapping TypeName="sartasModel.traindetail">
+        <MappingFragment StoreEntitySet="traindetail">
+          <ScalarProperty Name="TrainDetail_ID" ColumnName="TrainDetail_ID" />
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="TrainDetail_OrderNo" ColumnName="TrainDetail_OrderNo" />
+          <ScalarProperty Name="TrainDetail_No" ColumnName="TrainDetail_No" />
+          <ScalarProperty Name="TrainDetail_Remark" ColumnName="TrainDetail_Remark" />
+          <ScalarProperty Name="TrainDetail_IF" ColumnName="TrainDetail_IF" />
+          <ScalarProperty Name="vehicletype" ColumnName="vehicletype" />
+          <ScalarProperty Name="startstation" ColumnName="startstation" />
+          <ScalarProperty Name="endstation" ColumnName="endstation" />
+          <ScalarProperty Name="GoodsName" ColumnName="GoodsName" />
+          <ScalarProperty Name="Ziz" ColumnName="Ziz" />
+          <ScalarProperty Name="Zaiz" ColumnName="Zaiz" />
+          <ScalarProperty Name="HC" ColumnName="HC" />
+          <ScalarProperty Name="smoke_result" ColumnName="smoke_result" />
+          <ScalarProperty Name="DealTime" ColumnName="DealTime" />
+          <ScalarProperty Name="AlarmLevel" ColumnName="AlarmLevel" />
+          <ScalarProperty Name="AlarmTime" ColumnName="AlarmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_log">
+      <EntityTypeMapping TypeName="sartasModel.sys_log">
+        <MappingFragment StoreEntitySet="sys_log">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="OpTime" ColumnName="OpTime" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_r_role_function">
+      <EntityTypeMapping TypeName="sartasModel.account_r_role_function">
+        <MappingFragment StoreEntitySet="account_r_role_function">
+          <ScalarProperty Name="FunctionID" ColumnName="FunctionID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_r_users_roles">
+      <EntityTypeMapping TypeName="sartasModel.account_r_users_roles">
+        <MappingFragment StoreEntitySet="account_r_users_roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_t_function">
+      <EntityTypeMapping TypeName="sartasModel.account_t_function">
+        <MappingFragment StoreEntitySet="account_t_function">
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_t_role">
+      <EntityTypeMapping TypeName="sartasModel.account_t_role">
+        <MappingFragment StoreEntitySet="account_t_role">
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_t_station">
+      <EntityTypeMapping TypeName="sartasModel.account_t_station">
+        <MappingFragment StoreEntitySet="account_t_station">
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="StationType" ColumnName="StationType" />
+          <ScalarProperty Name="TelexCode" ColumnName="TelexCode" />
+          <ScalarProperty Name="ConnectString" ColumnName="ConnectString" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_t_user">
+      <EntityTypeMapping TypeName="sartasModel.account_t_user">
+        <MappingFragment StoreEntitySet="account_t_user">
+          <ScalarProperty Name="TelexCode" ColumnName="TelexCode" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="VoiceName" ColumnName="VoiceName" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RealName" ColumnName="RealName" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statistics_image">
+      <EntityTypeMapping TypeName="sartasModel.statistics_image">
+        <MappingFragment StoreEntitySet="statistics_image">
+          <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+          <ScalarProperty Name="DataSource" ColumnName="DataSource" />
+          <ScalarProperty Name="UseQBCarInfoNum" ColumnName="UseQBCarInfoNum" />
+          <ScalarProperty Name="RecvCarInfoNum" ColumnName="RecvCarInfoNum" />
+          <ScalarProperty Name="NoCheckImageRemark" ColumnName="NoCheckImageRemark" />
+          <ScalarProperty Name="FailCheckImageRemark" ColumnName="FailCheckImageRemark" />
+          <ScalarProperty Name="SucCheckImageRemark" ColumnName="SucCheckImageRemark" />
+          <ScalarProperty Name="CallAlgImageRemark" ColumnName="CallAlgImageRemark" />
+          <ScalarProperty Name="MonitorImageRemark" ColumnName="MonitorImageRemark" />
+          <ScalarProperty Name="NoCheckImageNum" ColumnName="NoCheckImageNum" />
+          <ScalarProperty Name="FailCheckImageNum" ColumnName="FailCheckImageNum" />
+          <ScalarProperty Name="SucCheckImageNum" ColumnName="SucCheckImageNum" />
+          <ScalarProperty Name="CallAlgImageNum" ColumnName="CallAlgImageNum" />
+          <ScalarProperty Name="MonitorImageNum" ColumnName="MonitorImageNum" />
+          <ScalarProperty Name="StaggerEndOrderNo" ColumnName="StaggerEndOrderNo" />
+          <ScalarProperty Name="StaggerBgnOrderNo" ColumnName="StaggerBgnOrderNo" />
+          <ScalarProperty Name="TrainComeDate" ColumnName="TrainComeDate" />
+          <ScalarProperty Name="OneCarCheckImagesNums" ColumnName="OneCarCheckImagesNums" />
+          <ScalarProperty Name="AllCarNum" ColumnName="AllCarNum" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="TrainID" ColumnName="TrainID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

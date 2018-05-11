@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9533BC97-F361-4D57-96B2-DCED8DCEB6EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TOEC_SASTAD_Data</RootNamespace>
+    <AssemblyName>TOEC SASTAD Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MySql.Data.6.9.11\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\..\TOEC_Client\SystemJieFaChe.Shell\packages\MySql.Data.Entity.6.9.11\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BLL_account_t_function.cs" />
+    <Compile Include="BLL\BLL_account_t_role.cs" />
+    <Compile Include="BLL\BLL_account_t_station.cs" />
+    <Compile Include="BLL\BLL_AlarmDetail.cs" />
+    <Compile Include="BLL\BLL_account_t_user.cs" />
+    <Compile Include="BLL\BLL_hotwheel_axle.cs" />
+    <Compile Include="BLL\BLL_Line.cs" />
+    <Compile Include="BLL\BLL_Log.cs" />
+    <Compile Include="BLL\BLL_Statistics_Image.cs" />
+    <Compile Include="BLL\BLL_SysCode.cs" />
+    <Compile Include="BLL\BLL_Train.cs" />
+    <Compile Include="BLL\BLL_Car.cs" />
+    <Compile Include="Enum\EnumClass.cs" />
+    <Compile Include="Enum\EnumExtend.cs" />
+    <Compile Include="Model\account_r_role_function.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\account_r_users_roles.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\account_t_function.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\account_t_role.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\account_t_station.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\account_t_user.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PredicateBuilder.cs" />
+    <Compile Include="Model\statistics_image.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sys_log.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\View_Train.cs" />
+    <Compile Include="Model\alarmdetail.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\View_TrainDetail.cs" />
+    <Compile Include="Model\hotwheel_axle.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\line.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\qbdetail.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\qbmaster.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SASTAD_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SASTAD_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SASTAD_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SASTAD_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SASTAD_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sys_code.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sys_codemap.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\train.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\traindetail.cs">
+      <DependentUpon>SASTAD_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model\SASTAD_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SASTAD_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Config\DB.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Model\SASTAD_Model.edmx.diagram">
+      <DependentUpon>SASTAD_Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\SASTAD_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SASTAD_Model.edmx</DependentUpon>
+      <LastGenOutput>SASTAD_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\SASTAD_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SASTAD_Model.edmx</DependentUpon>
+      <LastGenOutput>SASTAD_Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TOEC_Common\TOEC_Common.csproj">
+      <Project>{e4aefbd9-fd44-4529-a5d9-93fe374ec368}</Project>
+      <Name>TOEC_Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

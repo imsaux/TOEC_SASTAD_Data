@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sartasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="alarmdetail">
+    <Key>
+      <PropertyRef Name="AlarmDetail_ID" />
+    </Key>
+    <Property Name="AlarmDetail_ID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Train_ID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TrainDetail_ID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="Side" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FileContent" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="ProblemType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AlarmLevel" Type="Int32" />
+    <Property Name="Source" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AlgResult" Type="Int32" />
+    <Property Name="HandleResult" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="OpUser" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="OpTime" Type="DateTime" />
+    <Property Name="InsertTime" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="hotwheel_axle">
+    <Key>
+      <PropertyRef Name="HWAxleID" />
+    </Key>
+    <Property Name="HWAxleID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TrainDetail_ID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="Axle_OrderNum" Type="Int32" />
+    <Property Name="TrainDetail_OrderNum" Type="Int32" />
+    <Property Name="Left_TemperatureRise" Type="Single" />
+    <Property Name="Right_TemperatureRise" Type="Single" />
+    <Property Name="LeftWave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RightWave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Speed" Type="Single" />
+    <Property Name="NextAxleDistance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InTime" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="line">
+    <Key>
+      <PropertyRef Name="Line_ID" />
+    </Key>
+    <Property Name="Line_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Line_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GQCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CXCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WMVCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IPaddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Userid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="port" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CameNum" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TelexCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NextTelexCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="qbdetail">
+    <Key>
+      <PropertyRef Name="QBDetailID" />
+    </Key>
+    <Property Name="QBDetailID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QBMasterID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="CC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SWBZ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SWH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CZ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JYBZ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Intime" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="qbmaster">
+    <Key>
+      <PropertyRef Name="QBMasterID" />
+    </Key>
+    <Property Name="QBMasterID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TrainID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_code">
+    <Key>
+      <PropertyRef Name="Code_ID" />
+    </Key>
+    <Property Name="Code_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeMap_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="tabindex" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Meaning" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnable" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sys_codemap">
+    <Key>
+      <PropertyRef Name="CodeMap_ID" />
+    </Key>
+    <Property Name="CodeMap_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Meaning" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="train">
+    <Key>
+      <PropertyRef Name="Train_ID" />
+    </Key>
+    <Property Name="Train_ID" Type="Guid" Nullable="false" />
+    <Property Name="Line_ID" Type="Int32" />
+    <Property Name="Train_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Train_Speed" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Train_Count" Type="Int32" />
+    <Property Name="Train_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Train_ComeDate" Type="DateTime" />
+    <Property Name="Train_WorkFlag" Type="Int32" Nullable="false" />
+    <Property Name="Train_Real" Type="Int32" />
+    <Property Name="source" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TelexCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AlarmLevel" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="traindetail">
+    <Key>
+      <PropertyRef Name="TrainDetail_ID" />
+    </Key>
+    <Property Name="TrainDetail_ID" Type="Guid" Nullable="false" />
+    <Property Name="Train_ID" Type="Guid" />
+    <Property Name="TrainDetail_OrderNo" Type="Int32" />
+    <Property Name="TrainDetail_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TrainDetail_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TrainDetail_IF" Type="Int32" />
+    <Property Name="vehicletype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="startstation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="endstation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GoodsName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ziz" Type="Decimal" />
+    <Property Name="Zaiz" Type="Decimal" />
+    <Property Name="HC" Type="Decimal" />
+    <Property Name="smoke_result" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DealTime" Type="DateTime" />
+    <Property Name="AlarmLevel" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AlarmTime" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="sartasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="alarmdetail" EntityType="Self.alarmdetail" />
+    <EntitySet Name="hotwheel_axle" EntityType="Self.hotwheel_axle" />
+    <EntitySet Name="line" EntityType="Self.line" />
+    <EntitySet Name="qbdetail" EntityType="Self.qbdetail" />
+    <EntitySet Name="qbmaster" EntityType="Self.qbmaster" />
+    <EntitySet Name="sys_code" EntityType="Self.sys_code" />
+    <EntitySet Name="sys_codemap" EntityType="Self.sys_codemap" />
+    <EntitySet Name="train" EntityType="Self.train" />
+    <EntitySet Name="traindetail" EntityType="Self.traindetail" />
+    <EntitySet Name="sys_log" EntityType="sartasModel.sys_log" />
+    <EntitySet Name="account_r_role_function" EntityType="sartasModel.account_r_role_function" />
+    <EntitySet Name="account_r_users_roles" EntityType="sartasModel.account_r_users_roles" />
+    <EntitySet Name="account_t_function" EntityType="sartasModel.account_t_function" />
+    <EntitySet Name="account_t_role" EntityType="sartasModel.account_t_role" />
+    <EntitySet Name="account_t_station" EntityType="sartasModel.account_t_station" />
+    <EntitySet Name="account_t_user" EntityType="sartasModel.account_t_user" />
+    <EntitySet Name="statistics_image" EntityType="sartasModel.statistics_image" />
+  </EntityContainer>
+  <EntityType Name="sys_log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="OpTime" Type="DateTime" />
+    <Property Name="ApplicationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FunctionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Detail" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="Version" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="account_r_role_function">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="RoleID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="FunctionID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="account_r_users_roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="RoleID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="account_t_function">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="PID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="FunctionName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNum" Type="Int32" />
+    <Property Name="Visible" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_t_role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNum" Type="Int32" />
+  </EntityType>
+  <EntityType Name="account_t_station">
+    <Key>
+      <PropertyRef Name="StationID" />
+    </Key>
+    <Property Name="StationID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="StationName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ConnectString" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TelexCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StationType" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNum" Type="Int32" />
+  </EntityType>
+  <EntityType Name="account_t_user">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DeptCode" Type="Int32" />
+    <Property Name="RealName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShiftName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VoiceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TelexCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="statistics_image">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="TrainID" Type="Guid" />
+    <Property Name="LineID" Type="Int32" />
+    <Property Name="AllCarNum" Type="Int32" />
+    <Property Name="OneCarCheckImagesNums" Type="Int32" />
+    <Property Name="TrainComeDate" Type="DateTime" />
+    <Property Name="StaggerBgnOrderNo" Type="Int32" />
+    <Property Name="StaggerEndOrderNo" Type="Int32" />
+    <Property Name="MonitorImageNum" Type="Int32" />
+    <Property Name="CallAlgImageNum" Type="Int32" />
+    <Property Name="SucCheckImageNum" Type="Int32" />
+    <Property Name="FailCheckImageNum" Type="Int32" />
+    <Property Name="NoCheckImageNum" Type="Int32" />
+    <Property Name="MonitorImageRemark" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="CallAlgImageRemark" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="SucCheckImageRemark" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="FailCheckImageRemark" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="NoCheckImageRemark" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="RecvCarInfoNum" Type="Int32" />
+    <Property Name="UseQBCarInfoNum" Type="Int32" />
+    <Property Name="DataSource" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InsertTime" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

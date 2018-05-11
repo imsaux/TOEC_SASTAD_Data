@@ -1,0 +1,33 @@
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\TOEC SASTAD Data.dll.config
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\TOEC SASTAD Data.dll
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\TOEC SASTAD Data.pdb
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\EntityFramework.dll
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\EntityFramework.SqlServer.dll
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\MySql.Data.dll
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\EntityFramework.xml
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\EntityFramework.SqlServer.xml
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\obj\Release\TOEC SASTAD Data.dll
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\obj\Release\TOEC SASTAD Data.pdb
+E:\SVN\SourceCode\TOECInspection\trunk\TOEC Unit Control Center\TOEC SASTAD Data\obj\Release\TOEC SASTAD Data.csprojResolveAssemblyReference.cache
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\Config\Log4Net.config
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\Config\DB.config
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\TOEC SASTAD Data.dll.config
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\TOEC SASTAD Data.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\TOEC SASTAD Data.pdb
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\EntityFramework.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\EntityFramework.SqlServer.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\MySql.Data.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\MySql.Data.Entity.EF6.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\TOEC_Common.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\log4net.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\TOEC_Common.pdb
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\EntityFramework.xml
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\EntityFramework.SqlServer.xml
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\log4net.xml
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\obj\Release\TOEC SASTAD Data.csprojResolveAssemblyReference.cache
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\obj\Release\TOEC SASTAD Data.dll
+E:\SVN\SourceCode\TOEC_Framework\TOEC_ORM\TOEC SASTAD Data\obj\Release\TOEC SASTAD Data.pdb

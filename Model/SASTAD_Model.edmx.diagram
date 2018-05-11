@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cff4f39f87cf445db16d8968c9b8d32f" Name="Diagram1">
+        <EntityTypeShape EntityType="sartasModel.alarmdetail" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.hotwheel_axle" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.line" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.qbdetail" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.qbmaster" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.sys_code" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.sys_codemap" Width="1.5" PointX="6.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.train" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.traindetail" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sartasModel.sys_log" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="sartasModel.account_r_role_function" Width="2.25" PointX="12.5" PointY="0.75" />
+        <EntityTypeShape EntityType="sartasModel.account_r_users_roles" Width="1.875" PointX="10.375" PointY="6.25" />
+        <EntityTypeShape EntityType="sartasModel.account_t_function" Width="2.125" PointX="12.5" PointY="5.25" />
+        <EntityTypeShape EntityType="sartasModel.account_t_role" Width="2.125" PointX="12.5" PointY="3.25" />
+        <EntityTypeShape EntityType="sartasModel.account_t_station" Width="1.75" PointX="10.5" PointY="0.75" />
+        <EntityTypeShape EntityType="sartasModel.account_t_user" Width="1.75" PointX="10.5" PointY="3.25" />
+        <EntityTypeShape EntityType="sartasModel.statistics_image" Width="1.5" PointX="9.375" PointY="8.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
