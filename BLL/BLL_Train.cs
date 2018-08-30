@@ -23,7 +23,7 @@ namespace TOEC_SASTAD_Data.BLL
         /// <returns></returns>
         public train GetTrain(DateTime dt, int LineID)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 train old = db.train.FirstOrDefault(n => n.Train_ComeDate == dt && n.Line_ID == LineID);
                 return old;
@@ -44,7 +44,7 @@ namespace TOEC_SASTAD_Data.BLL
         /// <returns></returns>
         public List<View_Train> GetTrainList(DateTime st, DateTime ed, string LineID, string TrainNo, string TrainDetailNo, string HasProblem, List<string> ProblemTypes, out int TrainCount)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 List<View_Train> res = new List<View_Train>();
                 var query = from t in db.train.AsEnumerable()
@@ -394,7 +394,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     train t = db.train.Where(n => n.Line_ID == LineID && n.Train_ComeDate >= TrainComeDate).OrderByDescending(n => n.Train_ComeDate).FirstOrDefault();
                     return t;
@@ -411,7 +411,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     Guid tmp = new Guid(TrainID);
                     var q = db.traindetail.Where(n => n.Train_ID == tmp && n.AlarmLevel != "0" && n.AlarmLevel != "" && n.AlarmLevel != null).Min(n => n.AlarmLevel);

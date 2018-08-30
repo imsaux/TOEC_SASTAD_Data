@@ -12,7 +12,7 @@ namespace TOEC_SASTAD_Data.BLL
     {
         public static void Success(string ApplicationName, string FunctionName, string Detail)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 sys_log l = new sys_log();
                 l.LogID = Guid.NewGuid().ToString();
@@ -27,7 +27,7 @@ namespace TOEC_SASTAD_Data.BLL
         }
         public static void Error(string ApplicationName, string FunctionName, string Detail)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 sys_log l = new sys_log();
                 l.LogID = Guid.NewGuid().ToString();

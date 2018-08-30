@@ -13,7 +13,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     var q = from f_r in db.account_r_role_function
                             join f in db.account_t_function on f_r.FunctionID equals f.ID

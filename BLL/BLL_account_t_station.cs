@@ -18,7 +18,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     account_t_station s = db.account_t_station.Where(n => n.StationID == StationID).FirstOrDefault();
                     return s;
@@ -31,7 +31,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     account_t_station s = db.account_t_station.Where(n => n.ConnectString == IP).FirstOrDefault();
                     return s;
@@ -45,7 +45,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     List<account_t_station> list = db.account_t_station.OrderBy(n => n.OrderNum).ToList();
                     return list;

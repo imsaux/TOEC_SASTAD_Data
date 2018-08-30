@@ -14,7 +14,7 @@ namespace TOEC_SASTAD_Data.BLL
     {
         public bool TrainPassed(DateTime TrainComeDate, int LineID)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 statistics_image old = db.statistics_image.FirstOrDefault(n => n.LineID == LineID && n.TrainComeDate == TrainComeDate);
                 return old != null ? true : false;

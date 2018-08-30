@@ -17,7 +17,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     account_r_users_roles user_role = db.account_r_users_roles.Where(n => n.UserID == UserID).FirstOrDefault();
                     if (user_role != null)

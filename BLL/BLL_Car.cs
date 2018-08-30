@@ -113,7 +113,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     //首先根据时间找到指定的分表
                     string TableName = "traindetail";
@@ -169,7 +169,7 @@ namespace TOEC_SASTAD_Data.BLL
             try
             {
                 List<View_TrainDetail> List_dtd = new List<View_TrainDetail>();
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     //首先根据时间找到指定的分表
                     string TableName = "traindetail";
@@ -245,7 +245,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     var q = db.alarmdetail.Where(n => n.TrainDetail_ID == TrainDetailID && n.AlarmLevel != 0 && n.AlarmLevel != null).Min(n => n.AlarmLevel);
                     Guid g = new Guid(TrainDetailID);
@@ -271,7 +271,7 @@ namespace TOEC_SASTAD_Data.BLL
         /// <returns></returns>
         public List<traindetail> Get_Cars_CurrentMonth_ByTrainID(string TrainID, out int TrainAlarmCount)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 Guid tmp = new Guid(TrainID);
                 List<traindetail> list_td = db.traindetail.Where(n => n.Train_ID == tmp).OrderBy(n => n.TrainDetail_OrderNo).ToList();

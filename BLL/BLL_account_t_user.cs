@@ -16,7 +16,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     account_t_user user = db.account_t_user.Where(n => n.UserName == UserName && n.Password == Password).FirstOrDefault();
 
@@ -30,7 +30,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     account_t_user user = db.account_t_user.Where(n => n.UserID == UserID).FirstOrDefault();
                     return user;

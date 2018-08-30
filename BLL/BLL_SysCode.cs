@@ -10,7 +10,7 @@ namespace TOEC_SASTAD_Data.BLL
 
         public List<sys_code> Get_AlarmTypeList()
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 sys_codemap map = db.sys_codemap.SingleOrDefault(n => n.Code == "AlarmType");
                 if (map != null)
@@ -30,7 +30,7 @@ namespace TOEC_SASTAD_Data.BLL
         /// <returns></returns>
         public List<sys_code> Get_SysCodeByMapCode(string MapCode)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 sys_codemap map = db.sys_codemap.SingleOrDefault(n => n.Code == MapCode);
                 if (map != null)
@@ -45,7 +45,7 @@ namespace TOEC_SASTAD_Data.BLL
 
         public string Get_SysMapCodeValue(string MapCode)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 sys_codemap map = db.sys_codemap.SingleOrDefault(n => n.Code == MapCode);
                 if (map != null)
@@ -59,7 +59,7 @@ namespace TOEC_SASTAD_Data.BLL
 
         public void Set_SysCode(sys_code c)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 //sys_code tmp = db.sys_code.SingleOrDefault(n => n.Code_ID == c.Code_ID);
                 db.sys_code.Attach(c);
@@ -73,7 +73,7 @@ namespace TOEC_SASTAD_Data.BLL
         /// <param name="c"></param>
         public void Set_SysCodeRemark(sys_code c)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 sys_code tmp = db.sys_code.SingleOrDefault(n => n.Code_ID == c.Code_ID);
                 if (tmp != null)

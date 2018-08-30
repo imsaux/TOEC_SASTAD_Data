@@ -14,7 +14,7 @@ namespace TOEC_SASTAD_Data.BLL
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     return db.hotwheel_axle.Where(n => n.TrainDetail_ID.ToString() == CarID).OrderBy(n => n.Axle_OrderNum).ToList();
                 }

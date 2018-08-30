@@ -109,7 +109,7 @@ WHERE ad.AlarmLevel>0 AND (1=0  ");
                     DisplayAlarmLevel = int.Parse(Config.DisplayAlarmLevel);
                 }
                 catch { DisplayAlarmLevel = 5; }
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     return db.alarmdetail.Where(n => n.TrainDetail_ID == CarID && n.AlgResult == 0 && n.AlarmLevel <= DisplayAlarmLevel).ToList();
                 }
@@ -133,7 +133,7 @@ WHERE ad.AlarmLevel>0 AND (1=0  ");
                     DisplayAlarmLevel = int.Parse(Config.DisplayAlarmLevel);
                 }
                 catch { DisplayAlarmLevel = 5; }
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     return db.alarmdetail.Where(n => n.Train_ID == TrainID && n.AlgResult == 0 && n.AlarmLevel <= DisplayAlarmLevel).ToList();
                 }
@@ -150,7 +150,7 @@ WHERE ad.AlarmLevel>0 AND (1=0  ");
         {
             try
             {
-                using (sartasEntities db = new sartasEntities())
+                using (sartas3 db = new sartas3())
                 {
                     int tmp = db.alarmdetail.Where(n => n.Train_ID == TrainID).ToList().Count;
                     if (tmp == 0)
@@ -175,7 +175,7 @@ WHERE ad.AlarmLevel>0 AND (1=0  ");
                 Thread.Sleep(new TimeSpan(0, Config.DelayTime4Save, 0));
                 if (list_ad != null && list_ad.Count > 0)
                 {
-                    using (sartasEntities db = new sartasEntities())
+                    using (sartas3 db = new sartas3())
                     {
                         train t = db.train.SingleOrDefault(n => n.Train_ComeDate == TrainComeDate && n.Line_ID == LineID && n.TelexCode == TelexCode);
                         if (t != null)
@@ -248,7 +248,7 @@ WHERE ad.AlarmLevel>0 AND (1=0  ");
         /// <returns></returns>
         public bool SaveAlarm(alarmdetail ad)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 try
                 {

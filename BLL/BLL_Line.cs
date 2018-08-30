@@ -15,10 +15,10 @@ namespace TOEC_SASTAD_Data.BLL
         /// <returns></returns>
         public string GetLineFolderName(int lid)
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
-                line l = db.line.Where(n => n.Line_ID == lid).FirstOrDefault();
-                return l != null ? l.GQCode : null;
+                line l = db.line.Where(n => n.ID == lid).FirstOrDefault();
+                return l != null ? l.LineCode : null;
             }
         }
         /// <summary>
@@ -27,7 +27,7 @@ namespace TOEC_SASTAD_Data.BLL
         /// <returns></returns>
         public List<line> GetAllLines()
         {
-            using (sartasEntities db = new sartasEntities())
+            using (sartas3 db = new sartas3())
             {
                 List<line> ls = db.line.ToList();
                 return ls;
